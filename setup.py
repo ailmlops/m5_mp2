@@ -6,7 +6,7 @@ from pathlib import Path
 from setuptools import find_packages, setup
 
 # Package meta-data.
-NAME = 'aimlops_sentiment_model'
+NAME = 'sentiment_model'
 DESCRIPTION = "Sentiment Model for assessing sentiment. It is a classification model package "
 EMAIL = "ajaytevatia@gmail.com"
 AUTHOR = "Ajay Singh"
@@ -48,7 +48,8 @@ setup(
     author_email=EMAIL,
     python_requires=REQUIRES_PYTHON,
     packages=find_packages(exclude=("tests",)),
-    package_data={"classification_model": ["VERSION"]},
+    #package_data={"classification_model": ["VERSION"]},
+    package_data={"regression_model": ["VERSION"]}, #m3_m4_longquiz_partb
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,

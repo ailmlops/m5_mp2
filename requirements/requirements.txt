@@ -10,3 +10,4 @@ beautifulsoup4==4.12.2
 nltk==3.8.1
 wheel
 twine
+tensorflow
