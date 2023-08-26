@@ -23,7 +23,8 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: my-trained-pipeline
-        path: sentiment_model/trained_models/*.pkl
+        #path: sentiment_model/trained_models/*.pkl
+        path: sentiment_model/trained_models/sentiment__model_output*
 
   test:
     needs: train
@@ -40,6 +41,7 @@ jobs:
       with:
         name: my-trained-pipeline
    # - run: mv *.pkl sentiment_model/trained_models/
+    - run: mv sentiment__model_output* sentiment_model/trained_models/
     - name: Install dependencies
       run: pip install -r requirements/test_requirements.txt
     - name: Test with pytest
