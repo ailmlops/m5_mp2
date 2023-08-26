@@ -39,7 +39,7 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: my-trained-pipeline
-    - run: mv *.pkl sentiment_model/trained_models/
+   # - run: mv *.pkl sentiment_model/trained_models/
     - name: Install dependencies
       run: pip install -r requirements/test_requirements.txt
     - name: Test with pytest
@@ -59,7 +59,7 @@ jobs:
     - uses: actions/download-artifact@v2
       with:
         name: my-trained-pipeline
-    - run: mv *.pkl sentiment_model/trained_models/
+  #  - run: mv *.pkl sentiment_model/trained_models/
     - name: Install dependencies
       run: pip install --upgrade build
     - name: Build package
